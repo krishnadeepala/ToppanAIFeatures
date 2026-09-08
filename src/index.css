@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=DM+Mono:wght@400;500&display=swap');
+@import 'tailwindcss';
+
+/* ── TOPPAN Light Theme ── */
+@theme {
+  /* TOPPAN primary blue */
+  --color-toppan-blue:        #0068B7;
+  --color-toppan-blue-dark:   #00519A;
+  --color-toppan-blue-deep:   #003D74;
+  --color-toppan-blue-light:  #0082D6;
+  --color-toppan-blue-bright: #1A9AE6;
+  --color-toppan-blue-pale:   #E8F2FA;
+  --color-toppan-blue-mist:   #F0F6FC;
+
+  /* Surfaces */
+  --color-bg-base:     #F3F7FB;
+  --color-bg-surface:  #FFFFFF;
+  --color-bg-elevated: #EAF1F8;
+  --color-bg-card:     #FFFFFF;
+
+  /* Borders */
+  --color-border:        #D6E2EE;
+  --color-border-bright: #B3CAE0;
+
+  /* Accent glow */
+  --color-accent-glow: rgba(0, 104, 183, 0.12);
+
+  /* Semantic */
+  --color-success: #16a34a;
+  --color-warning: #d97706;
+  --color-error:   #dc2626;
+  --color-info:    #0082D6;
+
+  /* Text */
+  --color-text-primary:   #0D1B2A;
+  --color-text-secondary: #3D5872;
+  --color-text-muted:     #7A9AB8;
+
+  --font-sans: 'Inter', system-ui, sans-serif;
+  --font-mono: 'DM Mono', monospace;
+}
+
+html, body, #root {
+  height: 100%;
+  background-color: #F3F7FB;
+  color: #0D1B2A;
+  font-family: 'Inter', system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+* { box-sizing: border-box; }
+
+::-webkit-scrollbar { width: 4px; height: 4px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: #C8D9E8; border-radius: 2px; }
+::-webkit-scrollbar-thumb:hover { background: #B3CAE0; }
+
+/* ── TOPPAN Blue button ── */
+.btn-primary {
+  background: linear-gradient(135deg, #0082D6, #0068B7);
+  transition: all 0.15s ease;
+  color: #ffffff;
+}
+.btn-primary:hover {
+  background: linear-gradient(135deg, #1A9AE6, #0076CC);
+  box-shadow: 0 2px 16px rgba(0, 104, 183, 0.3);
+}
+
+/* ── AI badge ── */
+.ai-badge {
+  background: linear-gradient(135deg, rgba(0, 104, 183, 0.08), rgba(0, 130, 214, 0.06));
+  border: 1px solid rgba(0, 104, 183, 0.22);
+}
+
+/* ── Card hover ── */
+.card-hover {
+  transition: border-color 0.15s ease, transform 0.15s ease, box-shadow 0.15s ease;
+}
+.card-hover:hover {
+  border-color: #B3CAE0 !important;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 20px rgba(0, 104, 183, 0.08);
+}
+
+/* ── Gradient text ── */
+.gradient-text {
+  background: linear-gradient(135deg, #0068B7, #1A9AE6);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* ── Status glows ── */
+.status-glow-green  { box-shadow: 0 0 8px rgba(22, 163, 74,  0.3); }
+.status-glow-blue   { box-shadow: 0 0 8px rgba(0, 104, 183,  0.3); }
+.status-glow-red    { box-shadow: 0 0 8px rgba(220, 38, 38,  0.3); }
+.status-glow-amber  { box-shadow: 0 0 8px rgba(217, 119, 6,  0.3); }
+
+/* ── AI pulse ── */
+.ai-pulse { animation: ai-pulse 2s ease-in-out infinite; }
+@keyframes ai-pulse {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0.5; }
+}
+
+/* ── TOPPAN wordmark ── */
+.toppan-wordmark {
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  color: #0D1B2A;
+}
+.toppan-wordmark span { color: #0068B7; }

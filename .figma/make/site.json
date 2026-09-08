@@ -1,0 +1,10 @@
+{
+  "description": "Design role-based UI mockups with AI-enhanced features using modern trends to streamline workflows and improve user experience for diverse teams.",
+  "robots": {
+    "index": false
+  },
+  "accessibility": {
+    "addBypassLinks": false,
+    "ignoreReducedMotion": false
+  }
+}
